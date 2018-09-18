@@ -1,0 +1,270 @@
+/* Estilo para el cuerpo donde se define el fondo negro y la fuente */
+body {
+	background-color: #02010a;
+	font-family: 'Dancing Script', cursive;
+}
+
+img {
+	-webkit-box-shadow: 2px 2px 2px #02010a;
+	-moz-box-shadow: 2px 2px 2px #02010a;
+}
+
+
+
+/* se define el comportamiento de la animacion del header */
+@keyframes animacion-header {
+	0% {
+		position: relative;
+		margin-top: 150%;
+	}
+	60% {
+		position: relative;
+		margin-top: -5%;
+
+	}
+	100% {
+		position: relative;
+		margin-top: 0%;
+	}
+}
+
+/* Estilos para la cabecera donde se define el color y se redondean los bordes superiores */
+.encabezado{
+	background-color: #5b7989;
+	border-radius: 10px 10px 0px 0px;
+	color: white;
+	max-width: 900px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	animation-name: animacion-header;
+	animation-duration: 2s;
+}
+
+/* Alinea el texto a la izquierda, de color blanco, sombreado de 2px y sombra de color */
+#titulo {
+	height: 0px;
+	width: 400px;
+	float: left;
+	text-shadow: 2px 2px 2px #02010a;
+	display: flex;
+	margin: 20px;
+}
+/* Le da diseño a la barra de navegacion */
+#menuInicio, #menuPaisaje, #menuRetratos {
+	color: white;
+	width: 150px;
+	float: right;
+	display: flex;
+
+}
+
+/* Da diseño al footer, fondo, bordes inferiores redondeados, letra negra, acomodado  */
+.piePagina {
+	background-color: #C6d5c5;
+	border-radius: 0px 0px 10px 10px;
+	color: black;
+	border: 200px;
+	max-width: 900px;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 auto;
+}
+
+/* Define estilo para cada contenedor del footer */
+.footerContacto, .footerTerminos, .footerDerechos, .footerRedes {
+	padding: 5px;
+}
+
+.contenido{
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+
+}
+.contenedor1, .contenedor2 {
+	display: flex;
+	flex-flow: row;
+
+}
+
+/* define estilo para el contenedor principal del inicio, fondo ancho y altura */
+.contenedorPrincipal {
+	background-color: #82c3a6;
+	display: flex;
+	flex-flow: column;
+
+}
+
+/* define estilo para el contenedor secundario del inicio, fondo ancho y altura */
+.contenedorSecundario {
+	background-color: #d5c75f;
+	border: 1px;
+	display: flex;
+
+
+}
+/* Proporciona animacion de rotacion cuando el puntero esta sobre la imagen izquierda */
+#imagenSecundariaIzquierda:hover {
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg); // IE 9
+	-moz-transform: rotate(10deg); // Firefox
+	-o-transform: rotate(10deg); // Safari and Chrome
+	-ms-transform: rotate(10deg); // Opera
+}
+
+
+
+/* se llama a la animacion definida en el keyframes que se activara con el puntero sobre la imagen */
+#imagenSecundariaDerecha:hover {
+
+
+	transform: translate(20px, 5px );
+	-webkit-transform: translate(20px, 5px); // IE 9
+	-moz-transform: translate(20px, 5px); // Firefox
+	-o-transform: translate(20px, 5px); // Safari and Chrome
+	-ms-transform: translate(20px, 5px); // Opera
+	box-shadow: #82c3a6;
+	border: 2px;
+
+}
+/* define estilo para la imagen derecha */
+#imagenSecundariaDerecha {
+	display: flex;
+	height: 20%;
+	width: 30%;
+	margin: 10 auto;
+
+}
+#imagenSecundariaIzquierda{
+
+	display: flex;
+	height: 20%;
+	width: 30%;
+	margin: 10 auto;
+	box-shadow: #82c3a6;
+	border: 2px;
+
+}
+
+/* estilo para la imagen central */
+#imagenCentral img {
+
+	height: 300px;
+	width: 80%;
+	display: block;
+	margin: 10 auto;
+}
+
+#contenidoPaisajes {
+	background-color: #d5c75f;
+	max-width: 900px;
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+/* define estilo para todas las imagenes */
+.imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img{
+	margin: 20px;
+	width: 250px;
+}
+
+#contenidoRetratos {
+	background-color: #d5c75f;
+	max-width: 900px;
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+/* Efecto de desenfoque en la imagen1 */
+.imagen1 {
+	webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+/* Efecto en escala de grises al 100% para #imagen2, #imagen4, #imagen6*/
+.imagen2, .imagen4, .imagen6 {
+	webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+/* Efecto sepia para imagen3 */
+.imagen3 {s
+	webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+/* define media querys para diseños responsivos y basados en el patron LayoutShifter */
+/* @media (min-width:900px) {
+.encabezado {
+width: 100%;
+order: 1;
+}
+
+.piePagina {
+width: 100%;
+order: 2;
+}
+
+} */
+
+@media (min-width: 420px) and (max-width: 720px){
+
+	.contenedorSecundario {
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+
+	}
+
+	.encabezado {
+		flex-direction: column;
+		width: 100%;
+		order: 1;
+	}
+
+	.contenedorPrincipal{
+
+		width: 100%;
+		order: 2;
+		flex-flow: column;
+	}
+
+.contenedor1, .contenedor2 {
+flex-flow: column;
+width: 100%;
+}
+.footerContacto {
+	width: 100%;
+	order: 5;
+
+}
+.footerTerminos {
+	width: 100%;
+	order: 6;
+}
+.footerRedes {
+	width: 100%;
+	order: 7;
+}
+.footerDerechos {
+	width: 100%;
+	order: 8;
+}
+
+#menuInicio, #menuPaisaje, #menuRetratos {
+	align-content: center;
+	display: flex;
+}
+
+	/* .encabezado h1 {
+		display: block;
+	} */
+
+}
+
+/* Fin de reglas css */
